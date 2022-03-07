@@ -1,11 +1,11 @@
-function spiralTraversal(mat, n, m) {
+function spiralTraversal(mat, m, n) {
 
     let out = [];
 
     let top = 0;
     let left = 0;
-    let bottom = n - 1;
-    let right = m - 1;
+    let bottom = m - 1;
+    let right = n - 1;
 
     while (top <= bottom || left <= right) {
 
@@ -50,12 +50,12 @@ function main() {
     11 10 9 8`
 
     input = input.trim().split('\n');
-    let [n, m] = input[0].trim().split(' ').map(Number);
+    let [m, n] = input[0].trim().split(' ').map(Number);
     let mat = [];
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < m; i++) {
         mat.push(input[i + 1].trim().split(' ').map(Number));
     }
-    console.log(spiralTraversal(mat, n, m));
+    console.log(spiralTraversal(mat, m, n));
 
 }
 
